@@ -13,7 +13,5 @@ document.querySelectorAll('[data-project]').forEach(button=>button.addEventListe
 document.querySelector('#close-dialog').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)dialog.close()}});document.querySelector('#discuss-project').addEventListener('click',()=>{dialog.close();location.hash='contact'});
 let intent='项目咨询';document.querySelectorAll('[data-intent]').forEach(b=>b.addEventListener('click',()=>{intent=b.dataset.intent;document.querySelectorAll('[data-intent]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.querySelector('#copy-status').textContent=''}));
 document.querySelector('#copy-brief').addEventListener('click',async()=>{const text=`你好 CCR，我从你的个人网站了解到你的作品，想和你聊聊${intent}。我的需求是：____；预计时间：____；预算或合作方式：____。`;try{await navigator.clipboard.writeText(text);document.querySelector('#copy-status').textContent='已复制，可粘贴到聊天中补充需求。'}catch{document.querySelector('#copy-status').textContent=text}});
-// Add the real QR image to assets/wechat-qr.png when supplied. Never generate a fake QR.
-const wechatQrPath=''; // Set to assets/wechat-qr.png after the owner supplies it.
-if(wechatQrPath){const qr=new Image();qr.onload=()=>{qr.alt='CCR 微信联系二维码';document.querySelector('#qr-area').replaceChildren(qr);document.querySelector('.wechat-card small').textContent='欢迎交流项目与合作想法'};qr.src=wechatQrPath;}
+// The owner's supplied QR image is linked directly in HTML for full-size viewing.
 showPage();
