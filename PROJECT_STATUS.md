@@ -1,5 +1,12 @@
 # CCR Portfolio — handoff
 
+## 最新：访问故障与GitHub Pages（2026-10-30）
+用户报告电脑浏览器连接超时。原Sites API显示active/public，HTTP首页及CSS/JS/图片均200，但实际IAB浏览器显示Cloudflare Sorry, you have been blocked。只证明不同访问路径存在差异，尚不能断定用户超时与IAB拦截根因相同；没有更改或绕过平台安全设置。
+
+使用现有公开仓库的gh-pages分支托管dist内容，地址https://zzcvby.github.io/ccr-portfolio/ 。发布树a6fdc00f8965302b28581ede67350deeb200484a由git subtree split --prefix=dist生成，源代码未修改。Pages配置已核对legacy/gh-pages/根目录/HTTPS，发布验收结果见本地项目主交接最新记录。第一次create接口返回409 already enabled，随后读取现有配置复用，未重复创建仓库。
+
+后续网站修改应先推送main，再从dist生成新的静态树并推送gh-pages，检查Pages构建built及首页/资源HTTP成功。GitHub页面以新地址为准，旧Sites保留。公开状态不变。
+
 ## 最新：公开分享（2026-10-30，优先于下文历史状态）
 用户明确要求“github别私有，网站还要发给别人看”。已将ZzcVBY/ccr-portfolio改为public，GitHub核对isPrivate=false；Sites访问策略改为public，工具返回成功。网站和二维码允许向访客展示，原私有要求已被用户撤销。GitHub Pages未启用，继续使用既有Sites网址。此轮只改访问权限和文档，未改网站源码，无需重新部署。后续维护应保持公开，除非用户再次变更要求。
 

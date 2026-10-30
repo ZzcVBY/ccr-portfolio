@@ -2,7 +2,13 @@
 
 CCR 的个人作品集：空间建模、科普影像与城市交互探索。
 
-本仓库与现有网站已按所有者于2026-10-30的明确要求公开。二维码为所有者提供的真实联系图片。网站地址：https://ccr-selected-work-2026.yjl012010.chatgpt.site/ 。GitHub用于源码管理，未启用GitHub Pages。
+本仓库与网站已按所有者于2026-10-30的明确要求公开。二维码为所有者提供的真实联系图片。
+
+网站：https://zzcvby.github.io/ccr-portfolio/
+
+原Sites地址在部分浏览器遇到Cloudflare拦截，保留作为既有部署：https://ccr-selected-work-2026.yjl012010.chatgpt.site/ 。
+
+GitHub Pages从gh-pages分支根目录发布。修改dist后，用git subtree split --prefix=dist生成静态发布分支，再推送到github远端gh-pages。main用于源码与文档，不直接作为Pages根目录。
 
 ## 本地预览
 
