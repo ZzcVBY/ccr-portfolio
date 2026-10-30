@@ -1,5 +1,8 @@
 # CCR Portfolio — handoff
 
+## 最新：公开分享（2026-10-30，优先于下文历史状态）
+用户明确要求“github别私有，网站还要发给别人看”。已将ZzcVBY/ccr-portfolio改为public，GitHub核对isPrivate=false；Sites访问策略改为public，工具返回成功。网站和二维码允许向访客展示，原私有要求已被用户撤销。GitHub Pages未启用，继续使用既有Sites网址。此轮只改访问权限和文档，未改网站源码，无需重新部署。后续维护应保持公开，除非用户再次变更要求。
+
 更新：2026-10-30。GitHub：https://github.com/ZzcVBY/ccr-portfolio ，已验证 isPrivate=true。默认分支main。
 
 ## 目标与完成内容
